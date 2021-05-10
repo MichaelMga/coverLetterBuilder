@@ -6,16 +6,17 @@
 
     //Given
 
-      $_POST["author"];
+      //$_POST["author"];
 
-      //When 
-
+      //When
 
       //Then => action
 
       $controller = new \CoverBuilder\Controllers\CoverController;
 
       $response = $controller->sendCover();
+
+      $this->assertEquals(302, $response->getStatusCode());
     
     }
 

@@ -1,17 +1,33 @@
-<?php   
+<?php
+
+   use CoverBuilder\Http\Response;
+
+   require_once __DIR__ . '/vendor/autoload.php';
+
+   $request = $_SERVER["REQUEST_URI"];
    
-  use CoverBuilder\Http\Response;
+   define("rootUrl" , '/COVERBUILDER/');
 
 
-  require_once __DIR__ . '/vendor/autoload.php';
+   /*
 
-  $response = new Response();
+     $myFriend = isset($_GET["name"]) ? $_GET["name"] : "Mike";
 
-  //header('Content-type: text/html');
-  //http_response_code(200);
+     $response = new Response();
+
+     //header('Content-type: text/html');
+     //http_response_code(200);
   
-  $response->setHeaders(['Content-Type' => 'text/html']);
-  $response->setStatusCode(200);
+     $response->setHeaders(['Content-Type' => 'text/html']);
+     $response->setStatusCode(200);
+     $response->setContent("Hello $myFriend");
 
-  
+     $response->send();
 
+     echo "Hello $myFriend";
+
+  */
+
+
+  $requestMap = [ ["login" => "src/views/login.php" ] ];
+    
