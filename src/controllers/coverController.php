@@ -1,8 +1,17 @@
 <?php
 
+   namespace CoverBuilder\Controllers;
 
-   class coverControllerTest extends TestCase {
+   
+     class CoverController{
 
 
-    
-   }
+        public function sendCover() : Response {
+
+
+            return new Response();
+
+
+        }
+
+     }

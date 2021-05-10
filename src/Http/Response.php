@@ -3,16 +3,17 @@
    namespace CoverBuilder\Http;
 
 
-class Response{
+   class Response{
+
+
       protected string $content; 
       protected array $header = [];
       protected int $statusCode = 200;
 
-      public function __construct(string $string, int $statusCode, array $headers = []){
+      public function __construct(string $string, int $statusCode, array $headers = ['Content-Type' => 'text/html']){
 
 
       }
-
 
       public function getStatusCode(): int{
 
@@ -24,6 +25,14 @@ class Response{
 
 
       }
-}
+
+
+      public function send(){
+
+
+      }
+
+
+  }
 
  
