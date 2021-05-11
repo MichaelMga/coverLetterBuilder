@@ -8,7 +8,9 @@
    define("rootUrl" , '/COVERBUILDER/');
 
 
-   $adminController = new Controllers\AdminController();
+   $adminController = new Controllers\AdminController;
+
+   $response = new Http\Request;
    
 
    /*

@@ -7,15 +7,10 @@
   public function setup(){
 
      $this->pdo = new PDO('mysql:host=localhost;dbname=coverbuilderdb;charset=utf-8', 'root', '');
-
      $this->pdo->query("DELETE FROM coverbuilderdb");
-
      $this->coverModel = new CoverModel($this->pdo);
-
      $this->controller = new \Controller\CoverController($this->pdo);
-
      $_POST = [];
-
     
   }
 
