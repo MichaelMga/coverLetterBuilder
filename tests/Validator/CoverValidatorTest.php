@@ -9,7 +9,12 @@
 
       function missingFieldsProvider(){
 
+               return [
+                  [ "mike" , "unknown author" ],
+                  [  ],
+                  [  ]
 
+               ]
 
       }
 
@@ -20,7 +25,7 @@
 
 
        
-       function coversCantBeBuiltWithMissingFields(){
+       function coversCantBeBuiltWithMissingFields($author, $errorMessage ){
 
 
 
