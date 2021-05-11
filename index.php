@@ -1,21 +1,15 @@
 <?php
 
-   //require_once __DIR__ . '/vendor/autoload.php';
-
-   require_once 'src/controllers/CoverController.php';
-
-   require_once 'src/controllers/adminController.php';
-
-
-
+   require_once __DIR__ . '/libraries/autoload.php';
 
    $request = $_SERVER["REQUEST_URI"];
+
    
    define("rootUrl" , '/COVERBUILDER/');
 
+
    $adminController = new Controllers\AdminController();
-
-
+   
 
    /*
 

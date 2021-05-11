@@ -1,6 +1,6 @@
 <?php
 
-   namespace CoverBuilder\Http;
+   namespace Http;
 
 
    class Response{
@@ -62,10 +62,6 @@
 
   
       }
-
-
-      
-
 
 
       public function send(){
