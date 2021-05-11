@@ -12,8 +12,7 @@
          include "index.php";
          
          $result = ob_get_clean();
-
-
+         
          $this->assertEquals("Hello Mike", $result);
 
          

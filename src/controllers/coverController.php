@@ -1,15 +1,15 @@
 <?php
 
-   namespace CoverBuilder\Controllers;
+   namespace Controllers;
 
    
      class CoverController{
 
 
-        public function sendCover() : Response {
+        public function sendCover() : string {
 
 
-            return new Response();
+            return 'sent';
 
 
         }

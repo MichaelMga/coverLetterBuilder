@@ -1,12 +1,20 @@
 <?php
 
-   use CoverBuilder\Http\Response;
+   //require_once __DIR__ . '/vendor/autoload.php';
 
-   require_once __DIR__ . '/vendor/autoload.php';
+   require_once 'src/controllers/CoverController.php';
+
+   require_once 'src/controllers/adminController.php';
+
+
+
 
    $request = $_SERVER["REQUEST_URI"];
    
    define("rootUrl" , '/COVERBUILDER/');
+
+   $adminController = new Controllers\AdminController();
+
 
 
    /*
@@ -29,5 +37,12 @@
   */
 
 
-  $requestMap = [ ["login" => "src/views/login.php" ] ];
-    
+
+  $requestMap = [rootUrl . "login" => $adminController->displayLogin() ];
+
+    if(isset($requestMap[$request])){
+
+       $requestMap[$request];
+
+    }
+
